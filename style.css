@@ -17,7 +17,8 @@
 }
 
 html {
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 84px
 }
 
 @media (prefers-reduced-motion:no-preference) {
@@ -165,8 +166,10 @@ nav a:hover {
     transition: transform .15s
 }
 
-.btn:hover {
-    transform: translateY(-2px)
+@media (prefers-reduced-motion:no-preference) {
+    .btn:hover {
+        transform: translateY(-2px)
+    }
 }
 
 .btn.red {
@@ -409,7 +412,8 @@ section {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    transition: box-shadow .2s, border-color .2s, transform .2s
 }
 
 .card p {
@@ -441,7 +445,8 @@ section {
     height: 96px;
     border-radius: 14px;
     object-fit: cover;
-    background: #fff
+    background: #fff;
+    transition: transform .25s ease
 }
 
 .pic.round {
@@ -477,6 +482,25 @@ section {
     font-weight: 800;
     font-size: 1.45rem;
     color: var(--red)
+}
+
+.tab:hover {
+    background: var(--blush)
+}
+
+.card:hover {
+    border-color: #DDB6AC;
+    box-shadow: 0 14px 28px rgba(43, 27, 23, .1)
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    .card:hover {
+        transform: translateY(-3px)
+    }
+
+    .card:hover .pic {
+        transform: scale(1.06)
+    }
 }
 
 .note {
