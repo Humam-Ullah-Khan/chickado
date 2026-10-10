@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chickado | Pizza, burgers and combos on Saddar Road, Peshawar</title>
+  <meta name="description"
+    content="Chickado serves pizza, burgers, wings and combo deals on Saddar Road, Peshawar. Dine in, take away or fast delivery. Order on WhatsApp. Open until 2 am.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Chickado home">
+        <img src="logo.png" alt="Chickado, Bite into Joy"
+          onerror="this.outerHTML='<span class=&quot;wordmark&quot;>Chickado</span>'">
+      </a>
+      <nav aria-label="Main">
+        <a href="#deals">Deals</a>
+        <a href="#menu">Menu</a>
+        <a href="#visit">Visit us</a>
+      </nav>
+      <button class="btn small" type="button" data-open-cart>Your order</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Bite into Joy.</h1>
+          <p class="lede">Pizza, burgers and big combos on Saddar Road. Dine in, take away or get it delivered.</p>
+          <div class="cta">
+            <a class="btn" href="#deals">See today's deals</a>
+            <a class="btn ghost" href="#menu">Browse the menu</a>
+          </div>
+          <p class="proof">Rated 4.8 on Google by 126 customers. Open until 2 am.</p>
+        </div>
+        <div class="pizza-stage"><img class="hero-photo" src="images/deal-hunger.jpg"
+            alt="Chickado pizza, crispy burgers, fries and mint margaritas" width="484" height="430"></div>
+      </div>
+    </div>
+
+    <section id="deals">
+      <div class="wrap">
+        <div class="head">
+          <h2>Deals for the table</h2>
+          <p>Full meals at one price. Add one to your order and send it on WhatsApp.</p>
+        </div>
+        <div class="deals">
+          <article class="deal">
+            <div class="shot"><img src="images/deal-hunger.jpg"
+                alt="Hunger Deal: pizza, two crispy burgers, fries and mint margaritas" width="484" height="430"
+                loading="lazy"></div>
+            <p class="tag">Full meal, full maza!</p>
+            <h3>Hunger Deal</h3>
+            <ul>
+              <li>1 medium Chickado Special pizza</li>
+              <li>2 crispy burgers</li>
+              <li>1 regular fries</li>
+              <li>2 mint margaritas</li>
+            </ul>
+            <div class="row">
+              <span class="price">Rs 1,950</span>
+              <button class="btn add" data-id="deal-hunger" data-name="Hunger Deal" data-price="1950">Add to
+                order</button>
+            </div>
+          </article>
+          <article class="deal">
+            <div class="shot two"><img src="images/deal-welcome-pizza.jpg" alt="Welcome Deal: large Crown Crust pizza"
+                width="384" height="254" loading="lazy"><img src="images/deal-welcome-wings.jpg"
+                alt="Welcome Deal: ten hot wings with dip" width="328" height="214" loading="lazy"></div>
+            <p class="tag">Perfect for family and friends</p>
+            <h3>Welcome Deal</h3>
+            <ul>
+              <li>1 large Crown Crust pizza</li>
+              <li>10 hot wings</li>
+              <li>1 regular fries</li>
+              <li>4 mint margaritas</li>
+            </ul>
+            <div class="row">
+              <span class="price">Rs 3,299</span>
+              <button class="btn add" data-id="deal-welcome" data-name="Welcome Deal" data-price="3299">Add to
+                order</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="wrap">
+        <div class="head">
+          <h2>The menu</h2>
+          <p>Tap Add to order on any item to pick a size and a quantity. Prices are in Pakistani rupees.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab" role="tab" id="t-pizza" aria-controls="p-pizza" aria-selected="true">Pizza</button>
+          <button class="tab" role="tab" id="t-burgers" aria-controls="p-burgers" aria-selected="false">Burgers</button>
+          <button class="tab" role="tab" id="t-combos" aria-controls="p-combos" aria-selected="false">Combos</button>
+        </div>
+        <div class="panel" id="p-pizza" role="tabpanel" aria-labelledby="t-pizza">
+          <div class="grid" id="pizzaGrid"></div>
+        </div>
+        <div class="panel" id="p-burgers" role="tabpanel" aria-labelledby="t-burgers" hidden>
+          <div class="grid three" id="burgerGrid"></div>
+        </div>
+        <div class="panel" id="p-combos" role="tabpanel" aria-labelledby="t-combos" hidden>
+          <div class="grid" id="comboGrid"></div>
+        </div>
+        <p class="note">Starters, pasta, wraps, shakes, mojitos, coffee and ice cream are also available at the
+          restaurant.</p>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="wrap cols">
+        <div>
+          <h2>Come hungry</h2>
+          <address>Saddar Road, opposite Sunehri Masjid Road,<br>near Saddar BRT stop, Peshawar Cantonment</address>
+          <div class="facts">
+            <p><strong>Open until 2 am</strong><br>Late-night cravings are covered.</p>
+            <p><strong>Phone and WhatsApp</strong><br>0331 6633141</p>
+          </div>
+          <div class="ways"><span>Dine in</span><span>Take away</span><span>Fast delivery</span></div>
+          <div class="cta">
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Chickado+Saddar+Road+Peshawar"
+              target="_blank" rel="noopener">Get directions</a>
+            <a class="btn ghost" href="tel:+923316633141">Call 0331 6633141</a>
+          </div>
+        </div>
+        <div class="callout">
+          <p class="big">Order in two taps.</p>
+          <p>Pick your food, send it on WhatsApp, and the team confirms your order with you.</p>
+          <button class="btn" type="button" data-open-cart>Start your order</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Chickado. Bite into Joy. Saddar Road, Peshawar.</div>
+  </footer>
+
+  <div class="cartbar" id="cartbar">
+    <button type="button" data-open-cart aria-live="polite">
+      <span id="cartCount">0 items</span>
+      <span>View order <strong id="cartTotal">Rs 0</strong></span>
+    </button>
+  </div>
+
+  <dialog id="cartDialog" aria-labelledby="cartTitle">
+    <form class="dlg" method="dialog" id="orderForm">
+      <header>
+        <h3 id="cartTitle">Your order</h3>
+        <button class="close" type="button" id="closeCart" aria-label="Close order">&times;</button>
+      </header>
+      <ul class="lines" id="lines"></ul>
+      <p class="empty" id="emptyMsg">Nothing here yet. Add a deal or a menu item to get started.</p>
+      <div class="total"><span>Total</span><span id="dlgTotal">Rs 0</span></div>
+      <div class="how" role="radiogroup" aria-label="How would you like it?">
+        <label><input type="radio" name="mode" value="Delivery" checked>Delivery</label>
+        <label><input type="radio" name="mode" value="Take away">Take away</label>
+        <label><input type="radio" name="mode" value="Dine in">Dine in</label>
+      </div>
+      <label class="field">Your name
+        <input type="text" id="custName" autocomplete="name">
+      </label>
+      <label class="field">Delivery address
+        <textarea id="custAddr" rows="2" autocomplete="street-address"></textarea>
+      </label>
+      <button class="btn red" type="button" id="sendOrder">Send order on WhatsApp</button>
+      <p class="fine">Your order opens in WhatsApp so you can check it before sending. Nothing is paid on this website.
+      </p>
+    </form>
+  </dialog>
+
+  <dialog id="itemDialog" tabindex="-1" aria-labelledby="itemName">
+    <div class="sheet">
+      <div class="itemshot">
+        <img id="itemImg" alt="">
+        <div class="ph" id="itemPh" hidden><span id="itemPhName"></span></div>
+      </div>
+      <div class="col">
+        <div class="details">
+          <div class="dhead">
+            <h3 id="itemName"></h3>
+            <button class="close" type="button" id="closeItem" aria-label="Close item details">&times;</button>
+          </div>
+          <p class="itemdesc" id="itemDesc"></p>
+          <fieldset class="sizegroup" id="sizeGroup">
+            <legend>Size</legend>
+            <div class="sizegrid" id="sizeGrid"></div>
+          </fieldset>
+          <div class="optrow">
+            <span class="optlabel" id="qtyLabel">Quantity</span>
+            <div class="stepper">
+              <button type="button" id="qtyMinus" aria-label="One less">&minus;</button>
+              <input type="number" id="qtyInput" value="1" min="1" max="20" inputmode="numeric" aria-labelledby="qtyLabel">
+              <button type="button" id="qtyPlus" aria-label="One more">+</button>
+            </div>
+          </div>
+          <label class="field">Special instructions
+            <textarea id="itemNote" rows="2" maxlength="120"
+              placeholder="e.g. no onions, extra spicy"></textarea>
+          </label>
+        </div>
+        <div class="itemfoot">
+          <div class="total"><span>Total</span><span id="itemTotal">Rs 0</span></div>
+          <button class="btn" type="button" id="addItemBtn">Add to order · Rs 0</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (function () {
+      var WA = "923316633141";
+      var SIZE = {S: "Small", M: "Medium", L: "Large", XL: "X-Large"};
+
+      var pizzas = [
+        ["Crown Crust", "Mughlai tikka topping, capsicum, onion and green olives on a special sauce.", {S: 650, M: 1350, L: 1800, XL: 2100}],
+        ["Stuff Kebab", "Kebab dip, mix cheese, capsicum, green olives and a special flavour topping.", {M: 1400, L: 2000, XL: 2750}],
+        ["Chickado Special", "Cheese, chicken, capsicum, jalapeno, mushroom, sweet corn and green olives with special white sauce.", {S: 550, M: 1350, L: 1700, XL: 2500}],
+        ["Behari Kebab", "Cheese, tikka chicken, juicy kebab, sweet corn, capsicum and black olives.", {S: 600, M: 1300, L: 1700, XL: 2500}],
+        ["Cheese Lover", "Special red pizza sauce with a flavourful cheese mix.", {S: 400, M: 900, L: 1300, XL: 2000}],
+        ["Malai Tikka", "White sauce, malai tikka, mix cheese, black olives, capsicum and onion.", {S: 500, M: 1100, L: 1500, XL: 2150}],
+        ["Chicken Extreme", "Mix cheese, black olives, onion, capsicum and two kinds of chicken topping.", {S: 500, M: 1100, L: 1500, XL: 2250}],
+        ["Chicken Tikka", "Pizza sauce, mix cheese, tikka chicken and onions.", {S: 480, M: 1100, L: 1450, XL: 2100}],
+        ["Fajita", "Red sauce, cheese mix, tikka chicken, capsicum and jalapenos.", {S: 480, M: 1100, L: 1450, XL: 2100}],
+        ["Supreme", "Smoky tikka chicken, special pizza sauce, capsicum, black olives and mushrooms.", {S: 480, M: 1100, L: 1450, XL: 2100}],
+        ["Pepperoni Mushroom", "Red sauce, beef pepperoni, mushrooms and black olives.", {S: 500, M: 1150, L: 1550, XL: 2200}]
+      ];
+
+      var burgers = [
+        ["White House Burger (double)", "Double grilled juicy chicken fillets with a cheese slice and special mild sauce.", 980],
+        ["Emmental Burger", "Double grilled chicken fillets, cheese slice and mouth-watering tangy red sauce.", 980],
+        ["Tangy Tank Burger", "Single grilled chicken fillet with tangy sauce and a cheese slice.", 670],
+        ["White House Burger (single)", "Single grilled juicy chicken fillet with a cheese slice and special sauce.", 620],
+        ["Epic Shot Burger", "Single juicy grilled beef patty with a cheese slice and tangy sauce.", 650],
+        ["Havana Burger", "Single grilled patty with a cheese slice and smoky BBQ sauce.", 650],
+        ["Royal Beast Burger", "Double grilled juicy beef patties, double cheese slice and smoky BBQ sauce.", 980],
+        ["Waldorf Burger", "Double grilled juicy beef patties, double cheese slice, special sauce and jalapenos.", 980],
+        ["American Cheese Burger", "Double grilled beef patties with cheese and sauce.", 1020]
+      ];
+
+      var combos = [
+        ["Zinger Combo", "1 zinger, 1 regular fries, 1 regular drink", 770],
+        ["Crunch Box", "1 chicken broast piece, 1 regular fries, 1 regular drink", 650],
+        ["Chickado Crispy Box", "2 chicken broast pieces, 1 regular fries, 1 regular drink", 850],
+        ["Chickado Meal Box", "1 zinger, 1 chicken broast piece, 1 regular fries, 1 regular drink", 1020],
+        ["Chickado Duo Box", "4 chicken broast pieces, 1 regular fries, 2 regular drinks", 1350],
+        ["Extreme Duo Meal", "2 zingers, 1 regular fries, 2 regular drinks", 1350],
+        ["Grill Duo Deal 1", "2 single patty grill burgers, 2 regular fries, 2 regular drinks", 1700],
+        ["Grill Duo Deal 2", "2 double patty grill burgers, 2 regular fries, 2 regular drinks", 2000],
+        ["Baby Meal 1", "4 tempura nuggets, 1 regular fries, 1 slice juice", 520],
+        ["Baby Meal 2", "1 crispy burger, 1 regular fries, 1 regular drink", 550],
+        ["Single Strike", "1 small pizza, 1 regular drink", 600],
+        ["Chickado Couple", "1 medium pizza, 6 baked wings, 2 regular drinks", 1820],
+        ["Twin Box", "2 half large pizzas, 8 oven baked wings, 1 regular fries, 2 dip sauces", 2100],
+        ["Chickado Squad", "1 large pizza, 12 baked wings, 1.5 litre drink", 2750]
+      ];
+
+      var burgerPhotos = ["white-house-double", "emmental", "tangy-tank", "white-house-single", "epic-shot", "havana", "royal-beast", "waldorf", "american-cheese"];
+      var noComboPhoto = ["twin-box"];
+
+      function money(n) {return "Rs " + Number(n).toLocaleString("en-US");}
+      function slug(s) {return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");}
+      function esc(s) {return String(s).replace(/[&<>"']/g, function (c) {return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c];});}
+
+      /* items built from the menu arrays above */
+      var pizzaItems = pizzas.map(function (p) {
+        var prices = p[2];
+        return {
+          id: "pz-" + slug(p[0]),
+          title: p[0],
+          base: p[0] + " pizza",
+          desc: p[1],
+          sizes: prices,
+          price: null,
+          from: Math.min.apply(null, Object.keys(prices).map(function (k) {return prices[k];})),
+          img: "images/pizza-" + slug(p[0]) + ".jpg"
+        };
+      });
+
+      var burgerItems = burgers.map(function (b, i) {
+        return {
+          id: "bg-" + slug(b[0]),
+          title: b[0],
+          base: b[0],
+          desc: b[1],
+          sizes: null,
+          price: b[2],
+          img: "images/burger-" + burgerPhotos[i] + ".jpg"
+        };
+      });
+
+      var comboItems = combos.map(function (c) {
+        return {
+          id: "cb-" + slug(c[0]),
+          title: c[0],
+          base: c[0],
+          desc: c[1],
+          sizes: null,
+          price: c[2],
+          img: noComboPhoto.indexOf(slug(c[0])) === -1 ? "images/combo-" + slug(c[0]) + ".jpg" : null
+        };
+      });
+
+      var itemById = {};
+      pizzaItems.concat(burgerItems, comboItems).forEach(function (it) {itemById[it.id] = it;});
+
+      /* menu markup */
+      document.getElementById("pizzaGrid").innerHTML = pizzaItems.map(function (it) {
+        return '<article class="card photo"><img class="pic round" src="' + it.img + '" alt="" width="96" height="96" loading="lazy"><div class="body"><h3>' + esc(it.title) + '</h3><p>' + esc(it.desc) + '</p><div class="row"><span class="cost">From ' + money(it.from) + '</span><button type="button" class="btn small" data-open-item="' + it.id + '">Add to order</button></div></div></article>';
+      }).join("");
+
+      document.getElementById("burgerGrid").innerHTML = burgerItems.map(function (it) {
+        return '<article class="card photo"><img class="pic" src="' + it.img + '" alt="" width="96" height="96" loading="lazy"><div class="body"><h3>' + esc(it.title) + '</h3><p>' + esc(it.desc) + '</p><div class="row"><span class="cost">' + money(it.price) + '</span><button type="button" class="btn small" data-open-item="' + it.id + '">Add to order</button></div></div></article>';
+      }).join("");
+
+      document.getElementById("comboGrid").innerHTML = comboItems.map(function (it) {
+        var pic = it.img ? '<img class="pic wideimg" src="' + it.img + '" alt="" width="112" height="84" loading="lazy">' : '';
+        return '<article class="card' + (it.img ? ' photo wide' : '') + '">' + pic + '<div class="body"><h3>' + esc(it.title) + '</h3><p class="items">' + esc(it.desc) + '</p><div class="row"><span class="cost">' + money(it.price) + '</span><button type="button" class="btn small" data-open-item="' + it.id + '">Add to order</button></div></div></article>';
+      }).join("");
+
+      /* tabs */
+      var tabs = [].slice.call(document.querySelectorAll(".tab"));
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener("click", function () {select(tab);});
+        tab.addEventListener("keydown", function (e) {
+          var n = null;
+          if (e.key === "ArrowRight") n = tabs[(i + 1) % tabs.length];
+          if (e.key === "ArrowLeft") n = tabs[(i - 1 + tabs.length) % tabs.length];
+          if (n) {n.focus(); select(n);}
+        });
+      });
+      function select(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+        });
+      }
+
+      /* item modal */
+      var itemDialog = document.getElementById("itemDialog");
+      var itemImg = document.getElementById("itemImg");
+      var itemPh = document.getElementById("itemPh");
+      var sizeGroup = document.getElementById("sizeGroup");
+      var sizeGrid = document.getElementById("sizeGrid");
+      var qtyInput = document.getElementById("qtyInput");
+      var noteInput = document.getElementById("itemNote");
+      var current = null;
+      var currentSize = null;
+      var qty = 1;
+      var lastTrigger = null;
+
+      itemImg.addEventListener("error", function () {
+        itemImg.hidden = true;
+        itemImg.removeAttribute("src");
+        itemPh.hidden = false;
+        document.getElementById("itemPhName").textContent = current ? current.title : "";
+      });
+
+      function unitPrice() {
+        if (!current) return 0;
+        return current.sizes ? current.sizes[currentSize] : current.price;
+      }
+
+      function updateFooter() {
+        document.getElementById("qtyMinus").disabled = qty <= 1;
+        document.getElementById("qtyPlus").disabled = qty >= 20;
+        var total = unitPrice() * qty;
+        document.getElementById("itemTotal").textContent = money(total);
+        document.getElementById("addItemBtn").textContent = "Add to order · " + money(total);
+      }
+
+      function syncQty() {
+        qtyInput.value = qty;
+        updateFooter();
+      }
+
+      function openItem(id, trigger) {
+        var it = itemById[id];
+        if (!it) return;
+        current = it;
+        qty = 1;
+        currentSize = it.sizes ? (it.sizes.M ? "M" : Object.keys(it.sizes)[0]) : null;
+        lastTrigger = trigger || null;
+        document.getElementById("itemName").textContent = it.title;
+        document.getElementById("itemDesc").textContent = it.desc;
+        if (it.img) {
+          itemPh.hidden = true;
+          itemImg.hidden = false;
+          itemImg.src = it.img;
+          itemImg.alt = it.title;
+        } else {
+          itemImg.hidden = true;
+          itemImg.removeAttribute("src");
+          itemPh.hidden = false;
+          document.getElementById("itemPhName").textContent = it.title;
+        }
+        sizeGroup.hidden = !it.sizes;
+        sizeGrid.innerHTML = it.sizes ? Object.keys(it.sizes).map(function (k) {
+          return '<label class="sizeopt"><input type="radio" name="itemSize" value="' + k + '"' + (k === currentSize ? " checked" : "") + '><span class="sizecard"><span class="szname">' + SIZE[k] + '</span><span class="szprice">' + money(it.sizes[k]) + '</span></span></label>';
+        }).join("") : "";
+        noteInput.value = "";
+        syncQty();
+        if (!itemDialog.open) {itemDialog.showModal();}
+        document.body.classList.add("locked");
+        itemDialog.focus();
+      }
+
+      sizeGrid.addEventListener("change", function (e) {
+        if (e.target && e.target.name === "itemSize") {currentSize = e.target.value; updateFooter();}
+      });
+
+      document.getElementById("qtyMinus").addEventListener("click", function () {qty = Math.max(1, qty - 1); syncQty();});
+      document.getElementById("qtyPlus").addEventListener("click", function () {qty = Math.min(20, qty + 1); syncQty();});
+      qtyInput.addEventListener("input", function () {
+        var v = parseInt(qtyInput.value, 10);
+        qty = isNaN(v) ? 1 : Math.max(1, Math.min(20, v));
+        updateFooter();
+      });
+      qtyInput.addEventListener("change", syncQty);
+
+      document.getElementById("addItemBtn").addEventListener("click", function () {
+        if (!current) return;
+        var sizeKey = current.sizes ? currentSize : "";
+        var note = noteInput.value.trim().slice(0, 120);
+        var key = current.id + "|" + sizeKey + "|" + note;
+        var name = current.base + (sizeKey ? " (" + SIZE[sizeKey] + ")" : "");
+        if (cart[key]) {cart[key].qty += qty;}
+        else {cart[key] = {name: name, price: unitPrice(), qty: qty, note: note};}
+        render();
+        itemDialog.close();
+      });
+
+      document.getElementById("closeItem").addEventListener("click", function () {itemDialog.close();});
+      itemDialog.addEventListener("click", function (e) {if (e.target === itemDialog) {itemDialog.close();} });
+      itemDialog.addEventListener("close", function () {
+        document.body.classList.remove("locked");
+        current = null;
+        if (lastTrigger && document.contains(lastTrigger)) {lastTrigger.focus();}
+        lastTrigger = null;
+      });
+
+      /* cart */
+      var cart = {};
+      var bar = document.getElementById("cartbar");
+      var dialog = document.getElementById("cartDialog");
+
+      document.addEventListener("click", function (e) {
+        var open = e.target.closest("[data-open-item]");
+        if (open) {openItem(open.getAttribute("data-open-item"), open); return;}
+        var add = e.target.closest(".add");
+        if (add) {
+          var id = add.dataset.id;
+          if (cart[id]) {cart[id].qty++;}
+          else {cart[id] = {name: add.dataset.name, price: Number(add.dataset.price), qty: 1};}
+          render();
+          return;
+        }
+        if (e.target.closest("[data-open-cart]")) {render(); dialog.showModal();}
+      });
+      document.getElementById("closeCart").addEventListener("click", function () {dialog.close();});
+      dialog.addEventListener("click", function (e) {if (e.target === dialog) {dialog.close();} });
+
+      document.getElementById("lines").addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-act]");
+        if (!b) return;
+        var id = b.dataset.id;
+        if (!cart[id]) return;
+        cart[id].qty += b.dataset.act === "plus" ? 1 : -1;
+        if (cart[id].qty <= 0) {delete cart[id];}
+        render();
+      });
+
+      function totals() {
+        var count = 0, sum = 0;
+        Object.keys(cart).forEach(function (k) {count += cart[k].qty; sum += cart[k].qty * cart[k].price;});
+        return {count: count, sum: sum};
+      }
+
+      function render() {
+        var t = totals();
+        bar.classList.toggle("on", t.count > 0);
+        document.getElementById("cartCount").textContent = t.count + (t.count === 1 ? " item" : " items");
+        document.getElementById("cartTotal").textContent = money(t.sum);
+        document.getElementById("dlgTotal").textContent = money(t.sum);
+        document.getElementById("emptyMsg").hidden = t.count > 0;
+        document.getElementById("sendOrder").disabled = t.count === 0;
+        document.getElementById("lines").innerHTML = Object.keys(cart).map(function (k) {
+          var c = cart[k];
+          return '<li><div><strong>' + esc(c.name) + '</strong>' +
+            (c.note ? '<br><span class="fine">' + esc(c.note) + '</span>' : '') +
+            '<br><span class="fine">' + money(c.price) + ' each</span></div>' +
+            '<div class="qty"><button type="button" data-act="minus" data-id="' + esc(k) + '" aria-label="Remove one ' + esc(c.name) + '">&minus;</button>' +
+            '<span aria-live="polite">' + c.qty + '</span>' +
+            '<button type="button" data-act="plus" data-id="' + esc(k) + '" aria-label="Add one more ' + esc(c.name) + '">+</button></div></li>';
+        }).join("");
+      }
+
+      document.getElementById("sendOrder").addEventListener("click", function () {
+        var t = totals();
+        if (t.count === 0) return;
+        var mode = document.querySelector('input[name="mode"]:checked').value;
+        var name = document.getElementById("custName").value.trim();
+        var addr = document.getElementById("custAddr").value.trim();
+        var lines = Object.keys(cart).map(function (k) {
+          var c = cart[k];
+          var line = "- " + c.qty + " x " + c.name + " (" + money(c.qty * c.price) + ")";
+          if (c.note) {line += "\n  Note: " + c.note;}
+          return line;
+        });
+        var msg = "Hi Chickado, I would like to place an order:\n" + lines.join("\n") +
+          "\nTotal: " + money(t.sum) + "\nOrder type: " + mode +
+          (name ? "\nName: " + name : "") +
+          (mode === "Delivery" && addr ? "\nAddress: " + addr : "");
+        window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+      });
+
+      document.querySelectorAll('input[name="mode"]').forEach(function (r) {
+        r.addEventListener("change", function () {
+          var del = document.querySelector('input[name="mode"]:checked').value === "Delivery";
+          document.getElementById("custAddr").closest("label").hidden = !del;
+        });
+      });
+
+      render();
+    })();
+  </script>
+</body>
+
+</html>
